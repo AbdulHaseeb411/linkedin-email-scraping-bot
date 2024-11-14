@@ -16,11 +16,11 @@ def main(input_filename, output_filename, username, password):
     
     driver.quit()
 
-# Usage
-input_filename = "profile_urls.csv"  # CSV containing LinkedIn profile URLs in the first column
-output_filename = "linkedin_emails.csv"  # CSV to save scraped emails
 
-# Replace these with actual LinkedIn credentials
+input_filename = "profile_urls.csv"  
+output_filename = "linkedin_emails.csv"  
+
+
 username = "your_email@example.com"
 password = "your_password"
 

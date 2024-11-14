@@ -6,7 +6,7 @@ def read_profiles_from_csv(input_filename):
     with open(input_filename, mode='r') as file:
         csv_reader = csv.reader(file)
         for row in csv_reader:
-            profiles.append(row[0])  # Assuming URLs are in the first column
+            profiles.append(row[0])  
     return profiles
 
 def save_to_csv(data, output_filename="linkedin_emails.csv"):

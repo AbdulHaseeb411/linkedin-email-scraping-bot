@@ -13,19 +13,19 @@ def login_linkedin(driver, username, password):
     driver.find_element(By.ID, "username").send_keys(username)
     driver.find_element(By.ID, "password").send_keys(password)
     driver.find_element(By.XPATH, "//button[@type='submit']").click()
-    time.sleep(3)  # Wait for the login to complete
+    time.sleep(3)  
 
 def scrape_email(driver, profile_url):
     """Navigate to a LinkedIn profile URL and scrape the email if available."""
     driver.get(profile_url)
-    time.sleep(2)  # Allow the profile page to load
+    time.sleep(2) 
     
     try:
-        # Locate and click on 'Contact info'
+       
         driver.find_element(By.XPATH, "//a[@data-control-name='contact_see_more']").click()
         time.sleep(1)
         
-        # Scrape the email address
+
         email_element = driver.find_element(By.XPATH, "//section[@class='pv-contact-info__contact-type ci-email']//a")
         email = email_element.text
         return email
